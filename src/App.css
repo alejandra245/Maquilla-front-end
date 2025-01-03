@@ -1,0 +1,101 @@
+body {
+  background-color: #d7bde2; /* Fondo morado claro */
+  font-family: 'Arial', sans-serif; /* Fuente general */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background: #ffffff; /* Fondo blanco del recuadro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 30px 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a; /* Color del título */
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: #7d3c98; /* Color del subtítulo */
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 40px; /* Ajustado para los íconos */
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fbeaf1; /* Fondo claro */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+input::placeholder {
+  color: #b88bbd; /* Placeholder suave */
+}
+
+input:focus {
+  border-color: #8e44ad; /* Borde morado al enfoque */
+  outline: none;
+}
+
+button {
+  background-color: #8e44ad; /* Botón morado */
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #732d91; /* Morado más oscuro al pasar */
+}
+
+a {
+  color: #6a1b9a; /* Color del enlace */
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6a1b9a; /* Color de los íconos */
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+}
