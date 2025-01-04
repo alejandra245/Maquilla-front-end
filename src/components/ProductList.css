@@ -1,44 +1,57 @@
+/* Estilo para el título principal */
 h1 {
-    text-align: center;
-    color: #6a1b9a;
+    text-align: center; /* Centra el texto */
+    color: #6a1b9a; /* Color morado oscuro */
 }
 
+/* Estilo para el formulario */
 form {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: center; /* Centra horizontalmente */
+    gap: 10px; /* Espacio entre los elementos del formulario */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
+/* Estilo para los campos de entrada y botones del formulario */
 form input, form button {
-    padding: 10px;
-    font-size: 1rem;
+    padding: 10px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
 }
 
+/* Estilo para la tabla */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border-collapse: collapse; /* Elimina los espacios entre bordes */
+    margin-top: 20px; /* Espaciado superior */
 }
 
+/* Estilo para las celdas y encabezados de la tabla */
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+    border: 1px solid #ddd; /* Borde gris claro */
+    padding: 8px; /* Espaciado interno */
+    text-align: center; /* Centra el texto */
 }
 
+/* Estilo para los encabezados de la tabla */
 th {
-    background-color: #f3e5f5;
-    color: #6a1b9a;
+    background-color: #f3e5f5; /* Fondo rosa claro */
+    color: #6a1b9a; /* Texto en morado oscuro */
 }
 
+/* Estilo para los botones */
 button {
-    background-color: #8e44ad;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
+    background-color: #8e44ad; /* Fondo morado vibrante */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 5px 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar */
 }
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #6a1b9a; /* Cambia a morado oscuro al pasar el mouse */
+}
+
 
 button:hover {
     background-color: #6a1b9a;

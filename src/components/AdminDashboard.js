@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
-import ProductTable from "./ProductTable";
-import { useNavigate } from "react-router-dom"; // Importa useNavigate
-import "./AdminDashboard.css";
+import ProductTable from "./ProductTable"; // Componente para mostrar la tabla de productos
+import { useNavigate } from "react-router-dom"; // Navegación entre rutas
+import "./AdminDashboard.css"; // Estilos específicos para este componente
 
+/**
+ * Componente principal para la gestión de productos en el panel de administración.
+ */
 const AdminDashboard = () => {
-  const navigate = useNavigate(); // Usar useNavigate para redireccionar
-  const [products, setProducts] = useState([]);
+  const navigate = useNavigate(); // Hook para redirigir entre páginas
+  const [products, setProducts] = useState([]); // Estado para los productos
   const [newProduct, setNewProduct] = useState({
     nombre: "",
     precio: "",
     cantidad: "",
-    imagen: "", // Agregar el campo de imagen
-  });
-  const [editingProduct, setEditingProduct] = useState(null); // Producto en edición
+    imagen: "", // Campo adicional para la URL de la imagen
+  }); // Estado para el nuevo producto
+  const [editingProduct, setEditingProduct] = useState(null); // Estado para el producto en edición
 
+  // Cargar productos desde el backend al montar el componente
   useEffect(() => {
     fetch("http://localhost:8080/productos")
       .then((response) => response.json())
@@ -21,6 +25,9 @@ const AdminDashboard = () => {
       .catch((error) => console.error("Error al cargar productos:", error));
   }, []);
 
+  /**
+   * Maneja el envío del formulario para agregar un nuevo producto.
+   */
   const handleAddProduct = (e) => {
     e.preventDefault();
     fetch("http://localhost:8080/productos", {
@@ -30,13 +37,17 @@ const AdminDashboard = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        setProducts([...products, data]);
-        setNewProduct({ nombre: "", precio: "", cantidad: "", imagen: "" }); // Reiniciar el formulario
+        setProducts([...products, data]); // Actualiza la lista de productos
+        setNewProduct({ nombre: "", precio: "", cantidad: "", imagen: "" }); // Reinicia el formulario
         alert("Producto agregado correctamente.");
       })
       .catch((error) => console.error("Error al agregar producto:", error));
   };
 
+  /**
+   * Maneja la eliminación de un producto.
+   * @param {number} id - ID del producto a eliminar
+   */
   const handleDeleteProduct = (id) => {
     if (window.confirm("¿Estás seguro de que deseas eliminar este producto?")) {
       fetch(`http://localhost:8080/productos/${id}`, {
@@ -46,21 +57,31 @@ const AdminDashboard = () => {
           if (!response.ok) {
             throw new Error("No se pudo eliminar el producto.");
           }
-          setProducts(products.filter((product) => product.id !== id));
+          setProducts(products.filter((product) => product.id !== id)); // Elimina el producto de la lista
           alert("Producto eliminado exitosamente.");
         })
         .catch((error) => console.error("Error al eliminar producto:", error));
     }
   };
 
+  /**
+   * Activa el modo de edición para un producto.
+   * @param {Object} product - Producto a editar
+   */
   const handleEditClick = (product) => {
-    setEditingProduct(product); // Establece el producto en edición
+    setEditingProduct(product);
   };
 
+  /**
+   * Cancela el modo de edición.
+   */
   const handleCancelEdit = () => {
-    setEditingProduct(null); // Cancela la edición
+    setEditingProduct(null);
   };
 
+  /**
+   * Guarda los cambios realizados a un producto en edición.
+   */
   const handleSaveEdit = () => {
     fetch(`http://localhost:8080/productos/${editingProduct.id}`, {
       method: "PUT",
@@ -80,19 +101,19 @@ const AdminDashboard = () => {
       .catch((error) => console.error("Error al editar producto:", error));
   };
 
-  // Función para cerrar sesión
+  /**
+   * Cierra la sesión del usuario y redirige al inicio de sesión.
+   */
   const handleLogout = () => {
-    localStorage.removeItem("user_data");  // Elimina los datos de sesión
-
-    // Redirige al login
-    navigate("/login");  // Redirige a la página de inicio de sesión
+    localStorage.removeItem("user_data"); // Elimina los datos de sesión del almacenamiento local
+    navigate("/login"); // Redirige al login
   };
 
   return (
     <div className="admin-container">
       <h1>Administrar Productos</h1>
 
-
+      {/* Formulario para agregar productos */}
       <form onSubmit={handleAddProduct}>
         <input
           type="text"
@@ -136,6 +157,8 @@ const AdminDashboard = () => {
         />
         <button type="submit">Agregar Producto</button>
       </form>
+
+      {/* Componente para mostrar y gestionar la tabla de productos */}
       <ProductTable
         products={products}
         onDelete={handleDeleteProduct}
@@ -146,8 +169,9 @@ const AdminDashboard = () => {
         setEditingProduct={setEditingProduct}
         isAdmin={true}
       />
-            {/* Botón de cerrar sesión */}
-            <button onClick={handleLogout}>Cerrar sesión</button>
+
+      {/* Botón de cerrar sesión */}
+      <button onClick={handleLogout}>Cerrar sesión</button>
     </div>
   );
 };

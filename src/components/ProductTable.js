@@ -1,18 +1,26 @@
 import React from "react";
 
+/**
+ * Componente para renderizar una tabla de productos.
+ * Incluye funcionalidades para editar y eliminar productos si el usuario tiene privilegios de administrador.
+ */
 const ProductTable = ({
-  products,
-  onDelete,
-  onEdit,
-  onSaveEdit,
-  onCancelEdit,
-  editingProduct,
-  setEditingProduct,
-  isAdmin,
+  products, // Lista de productos
+  onDelete, // Función para manejar la eliminación de productos
+  onEdit, // Función para activar el modo de edición
+  onSaveEdit, // Función para guardar cambios en un producto
+  onCancelEdit, // Función para cancelar la edición
+  editingProduct, // Producto que actualmente está en modo de edición
+  setEditingProduct, // Función para actualizar el producto en edición
+  isAdmin, // Indica si el usuario es administrador
 }) => {
+  /**
+   * Maneja los cambios en los campos de edición.
+   * Actualiza los valores del producto en edición.
+   */
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setEditingProduct({ ...editingProduct, [name]: value });
+    const { name, value } = e.target; // Obtiene el nombre y valor del campo
+    setEditingProduct({ ...editingProduct, [name]: value }); // Actualiza el producto en edición
   };
 
   return (
@@ -27,8 +35,10 @@ const ProductTable = ({
         </tr>
       </thead>
       <tbody>
+        {/* Mapea y renderiza cada producto en una fila */}
         {products.map((product) => (
           <tr key={product.id}>
+            {/* Si el producto está en modo de edición */}
             {editingProduct && editingProduct.id === product.id ? (
               <>
                 <td>
@@ -71,21 +81,27 @@ const ProductTable = ({
               </>
             ) : (
               <>
+                {/* Si el producto no está en modo de edición */}
                 <td>{product.nombre}</td>
                 <td>${product.precio}</td>
                 <td>{product.cantidad}</td>
                 <td>
                   {product.imagen ? (
                     <img
-                      src={product.imagen}
+                      src={product.imagen} // Muestra la imagen del producto
                       alt={product.nombre}
-                      style={{ width: "50px", height: "50px", objectFit: "cover" }}
+                      style={{
+                        width: "50px",
+                        height: "50px",
+                        objectFit: "cover", // Mantiene las proporciones
+                      }}
                     />
                   ) : (
                     "No disponible"
                   )}
                 </td>
                 <td>
+                  {/* Acciones disponibles solo para administradores */}
                   {isAdmin && (
                     <>
                       <button onClick={() => onEdit(product)}>Editar</button>

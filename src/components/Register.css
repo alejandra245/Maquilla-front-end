@@ -1,75 +1,85 @@
+/* Contenedor principal para el registro */
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f3e5f5; /* Fondo morado claro */
-  }
-  
-  .register-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 400px;
-  }
-  
-  .register-title {
-    color: #6a1b9a; /* Morado */
-    margin-bottom: 20px;
-  }
-  
-  .input-container {
-    position: relative;
-    margin: 10px 0;
-  }
-  
-  .input-container .icon {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6a1b9a;
-  }
-  
-  .input-container input,
-  .input-container select {
-    width: 100%;
-    padding: 10px 10px 10px 40px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-  
-  .register-button {
-    background-color: #6a1b9a; /* Morado */
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-    font-size: 16px;
-  }
-  
-  .register-button:hover {
-    background-color: #4a0072; /* Morado oscuro */
-  }
-  
-  .login-link {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  
-  .login-link a {
-    color: #6a1b9a;
-    text-decoration: none;
-  }
-  
-  .login-link a:hover {
-    text-decoration: underline;
-  }
-  
+  display: flex; /* Flexbox para organizar los elementos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #f3e5f5; /* Fondo morado claro */
+}
+
+/* Caja principal para el formulario de registro */
+.register-box {
+  background-color: white; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  text-align: center; /* Centra el texto */
+  width: 400px; /* Ancho fijo */
+}
+
+/* Título principal del formulario */
+.register-title {
+  color: #6a1b9a; /* Texto morado */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor de cada campo de entrada */
+.input-container {
+  position: relative; /* Necesario para posicionar el ícono */
+  margin: 10px 0; /* Espaciado vertical entre campos */
+}
+
+/* Estilo para los íconos dentro de los campos */
+.input-container .icon {
+  position: absolute; /* Posiciona el ícono dentro del contenedor */
+  left: 10px; /* Alinea el ícono a la izquierda */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta el centrado vertical */
+  color: #6a1b9a; /* Morado */
+}
+
+/* Estilo para los campos de entrada y el selector */
+.input-container input,
+.input-container select {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px 10px 10px 40px; /* Espaciado interno con margen para el ícono */
+  margin: 5px 0; /* Espaciado vertical entre campos */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 14px; /* Tamaño del texto */
+}
+
+/* Estilo para el botón de registro */
+.register-button {
+  background-color: #6a1b9a; /* Morado */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  width: 100%; /* Ocupa todo el ancho */
+  margin-top: 10px; /* Espaciado superior */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+/* Efecto hover para el botón de registro */
+.register-button:hover {
+  background-color: #4a0072; /* Morado oscuro */
+}
+
+/* Contenedor para el enlace de inicio de sesión */
+.login-link {
+  margin-top: 15px; /* Espaciado superior */
+  font-size: 14px; /* Tamaño del texto */
+}
+
+/* Estilo para el enlace de inicio de sesión */
+.login-link a {
+  color: #6a1b9a; /* Morado */
+  text-decoration: none; /* Sin subrayado */
+}
+
+/* Efecto hover para el enlace */
+.login-link a:hover {
+  text-decoration: underline; /* Subraya el texto al pasar por encima */
+}

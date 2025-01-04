@@ -1,92 +1,104 @@
+/* Estilo general del cuerpo de la página */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #b19cd9, #d1c4e9);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Arial', sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina padding */
+    background: linear-gradient(135deg, #b19cd9, #d1c4e9); /* Fondo degradado en morado */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex; /* Usa flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
+/* Contenedor principal del login */
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    display: flex; /* Flexbox para centrado */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa toda la altura */
 }
 
+/* Caja del formulario de login */
 .login-box {
-    background-color: white;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 350px;
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 2rem; /* Espaciado interno */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centra el texto */
+    width: 350px; /* Ancho fijo */
 }
 
+/* Estilo del título principal */
 .login-box h1 {
-    color: #6a1b9a;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    color: #6a1b9a; /* Morado oscuro */
+    font-size: 2rem; /* Tamaño grande */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
 
+/* Estilo del subtítulo */
 .login-box h2 {
-    color: #8e44ad;
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    color: #8e44ad; /* Morado vibrante */
+    font-size: 1.2rem; /* Tamaño mediano */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
+/* Contenedor de cada campo de entrada */
 .input-container {
-    display: flex;
-    align-items: center;
-    background: #f3e5f5;
-    border: 1px solid #d1c4e9;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 0.5rem;
+    display: flex; /* Flexbox para alinear iconos y campos */
+    align-items: center; /* Alinea verticalmente */
+    background: #f3e5f5; /* Fondo rosa claro */
+    border: 1px solid #d1c4e9; /* Borde lavanda */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado inferior */
+    padding: 0.5rem; /* Espaciado interno */
 }
 
+/* Estilo de los campos de entrada */
 .input-container input {
-    border: none;
-    outline: none;
-    background: transparent;
-    flex: 1;
-    padding-left: 10px;
-    font-size: 1rem;
-    color: #6a1b9a;
+    border: none; /* Sin bordes */
+    outline: none; /* Sin contorno al enfoque */
+    background: transparent; /* Fondo transparente */
+    flex: 1; /* Ocupa todo el espacio disponible */
+    padding-left: 10px; /* Espaciado a la izquierda */
+    font-size: 1rem; /* Tamaño de texto */
+    color: #6a1b9a; /* Morado oscuro */
 }
 
+/* Estilo de los iconos en los campos */
 .input-container .icon {
-    color: #8e44ad;
-    font-size: 1.2rem;
+    color: #8e44ad; /* Morado vibrante */
+    font-size: 1.2rem; /* Tamaño mediano */
 }
 
+/* Botón de inicio de sesión */
 .login-button {
-    background: #8e44ad;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 0.8rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    width: 100%;
+    background: #8e44ad; /* Fondo morado vibrante */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 0.8rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background 0.3s ease; /* Animación suave */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
+/* Efecto hover en el botón */
 .login-button:hover {
-    background: #6a1b9a;
+    background: #6a1b9a; /* Morado más oscuro */
 }
 
+/* Estilo del enlace de registro */
 .register-link {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #6a1b9a;
+    margin-top: 15px; /* Separación superior */
+    font-size: 0.9rem; /* Tamaño reducido */
+    color: #6a1b9a; /* Morado oscuro */
 }
 
+/* Estilo de los enlaces dentro del texto de registro */
 .register-link a {
-    color: #8e44ad;
-    text-decoration: none;
-    font-weight: bold;
+    color: #8e44ad; /* Morado vibrante */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita */
 }

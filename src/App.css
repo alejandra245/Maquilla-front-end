@@ -1,101 +1,114 @@
+/* Estilos generales */
 body {
   background-color: #d7bde2; /* Fondo morado claro */
-  font-family: 'Arial', sans-serif; /* Fuente general */
+  font-family: 'Arial', sans-serif; /* Fuente general para el sitio */
   margin: 0;
   padding: 0;
 }
 
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
+/* Tarjeta de login */
 .login-card {
   background: #ffffff; /* Fondo blanco del recuadro */
   border-radius: 20px; /* Bordes redondeados */
-  padding: 30px 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
+  padding: 30px 40px; /* Espaciado interno */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para efecto de elevación */
+  width: 100%; /* Ancho completo */
+  max-width: 400px; /* Máximo ancho */
+  text-align: center; /* Centrar contenido del texto */
 }
 
+/* Título principal */
 h1 {
-  font-size: 2.5rem;
-  color: #6a1b9a; /* Color del título */
-  margin-bottom: 5px;
-  font-weight: bold;
+  font-size: 2.5rem; /* Tamaño del título */
+  color: #6a1b9a; /* Color morado */
+  margin-bottom: 5px; /* Espaciado inferior */
+  font-weight: bold; /* Negrita */
 }
 
+/* Subtítulo */
 h2 {
-  font-size: 1.2rem;
-  color: #7d3c98; /* Color del subtítulo */
-  margin-bottom: 20px;
-  font-weight: normal;
+  font-size: 1.2rem; /* Tamaño del subtítulo */
+  color: #7d3c98; /* Morado más claro */
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-weight: normal; /* Peso normal */
 }
 
+/* Campos de entrada (texto y contraseña) */
 input[type="text"],
 input[type="password"] {
-  width: 100%;
-  padding: 12px 40px; /* Ajustado para los íconos */
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #fbeaf1; /* Fondo claro */
+  width: 100%; /* Ocupa todo el ancho */
+  padding: 12px 40px; /* Espaciado interno ajustado para íconos */
+  margin: 10px 0; /* Espaciado entre campos */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de texto */
+  background-color: #fbeaf1; /* Fondo rosa claro */
   display: flex;
   align-items: center;
-  position: relative;
+  position: relative; /* Posicionamiento relativo para íconos */
 }
 
+/* Placeholder del input */
 input::placeholder {
-  color: #b88bbd; /* Placeholder suave */
+  color: #b88bbd; /* Color suave para el texto de ayuda */
 }
 
+/* Efecto de enfoque en los campos */
 input:focus {
-  border-color: #8e44ad; /* Borde morado al enfoque */
-  outline: none;
+  border-color: #8e44ad; /* Borde morado al enfocar */
+  outline: none; /* Elimina el contorno azul predeterminado */
 }
 
+/* Botón */
 button {
-  background-color: #8e44ad; /* Botón morado */
-  color: #fff;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  background-color: #8e44ad; /* Fondo morado */
+  color: #fff; /* Texto blanco */
+  padding: 12px 20px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño de texto */
+  border: none; /* Sin bordes */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  width: 100%; /* Ocupa todo el ancho */
+  transition: background-color 0.3s ease; /* Efecto suave al cambiar color */
 }
 
+/* Efecto hover en el botón */
 button:hover {
   background-color: #732d91; /* Morado más oscuro al pasar */
 }
 
+/* Enlaces */
 a {
-  color: #6a1b9a; /* Color del enlace */
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-top: 15px;
-  display: inline-block;
+  color: #6a1b9a; /* Color morado para los enlaces */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 0.9rem; /* Tamaño del texto */
+  margin-top: 15px; /* Espaciado superior */
+  display: inline-block; /* Permite aplicar márgenes verticales */
 }
 
+/* Efecto hover en enlaces */
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado al pasar por encima */
 }
 
+/* Íconos dentro de los campos */
 .icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #6a1b9a; /* Color de los íconos */
+  position: absolute; /* Posición fija dentro del campo */
+  left: 10px; /* Separación a la izquierda */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste preciso para centrar */
+  color: #6a1b9a; /* Color morado para los íconos */
 }
 
+/* Contenedor de cada campo de entrada */
 .input-container {
-  position: relative;
-  margin-bottom: 15px;
+  position: relative; /* Necesario para posicionar íconos */
+  margin-bottom: 15px; /* Espaciado entre campos */
 }
